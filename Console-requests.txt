@@ -1,0 +1,11 @@
+- Получение токена:
+
+'curl -X POST -H "Content-Type: application/json" -d '{"name": "test", "password": "test"}' http://localhost:8081/auth'
+
+- Отправка сообщения
+
+'curl -X POST -H "Content-Type: application/json" -d '{"name": "test", "message": "Сообщение"}' -H "Authorization: Bearer_{token}" http://localhost:8081/api/message'  
+  
+- Показать 10 последних сообщений из БД 
+   
+ 'curl -X POST -H "Content-Type: application/json" -d '{"name": "test", "message": "History 10"}' -H "Authorization: Bearer_{token}" http://localhost:8081/api/message'
